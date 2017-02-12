@@ -16,7 +16,10 @@ suggestions by using down arrow (then up to go back to typing), and scroll throu
 -- Some commands are already pre-existing:
 
 attach_unity_output X: where X is 1 or 0 to enable or disable the redirection of Unity's console to that one. It's disabled by default to avoid bloating
+
 console_size X: where X is the height in pixels you want the console to take on screen
+
 console_opacity X: where X is a float between 0 and 1
+
 clear: to clear the console output
 
