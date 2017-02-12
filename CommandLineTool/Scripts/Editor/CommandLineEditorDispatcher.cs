@@ -3,13 +3,13 @@ using System.Collections;
 using UnityEditor;
 
 [InitializeOnLoad]
-public class CommandLineEditorDispatcher 
+public static class CommandLineEditorDispatcher
 {
     static CommandLineEditorDispatcher()
     {
         CommandLineHandler.Initialize();
         EditorApplication.update += Update;
-    }  
+    }
 
     public static void Update()
     {
@@ -20,7 +20,7 @@ public class CommandLineEditorDispatcher
             while (CommandLineHandler.m_MainThreadCommandLines.Count > 0)
             {
                 CommandLineData commandLine = CommandLineHandler.m_MainThreadCommandLines.Dequeue();
-                CommandLineHandler.CallMethod(commandLine);                
+                CommandLineHandler.CallMethod(commandLine);
             }
         }
     }
